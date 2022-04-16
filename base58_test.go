@@ -15,7 +15,7 @@ func TestBase58Encode(t *testing.T) {
 	assert.Nil(t, err)
 
 	b58AltStr := b58.Encode(id[:])
-	assert.Equal(t, b58AltStr, b58Str)
+	assert.Equal(t, b58AltStr, string(b58Str))
 }
 
 func TestBase58Decode(t *testing.T) {

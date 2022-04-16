@@ -8,11 +8,7 @@ import (
 // representation of the UUID.
 func (id UUID) MarshalBase58() ([]byte, error) {
 	var buffer [22]byte
-	err := base58.EncodeToBuffer(id[:], buffer[:])
-
-	if err != nil {
-		return nil, err
-	}
+	base58.EncodeToBuffer(id[:], buffer[:])
 
 	return buffer[:], nil
 }
